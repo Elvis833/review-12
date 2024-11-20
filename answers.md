@@ -5,7 +5,7 @@
 App.jsx
 
 ```jsx
-// Write your code here
+import Gallery from './components/Gallery.jsx'
 
 ```
 
@@ -27,23 +27,31 @@ const props = {
   rating: 4.5, // out of 5
 };
 
-// Write your code here
+const {name, packing, temperature} = props;
+
+console.log(name);
+console.log(packing);
+console.log(temperature);
 
 
 ```
 
 ### 3. State in React
 
-
+Its the internal Data of a component that can change overtime without reloading the page
 
 ### 4. Using state in React
 
 ```jsx
 
+import { usestate } from 'react';
 
-function Tea(props) {
-  // Add your code here
+const Tea = ()=> {
+const [isBrewing, setIsBrewing] = useState(true);
+return(
 
+)
+export default Tea;
 }
 ```
 
@@ -63,7 +71,9 @@ function Tea(props) {
 
   return <>
     <h1>Tea Time</h1>
-    <button>Check if tea is ready</button>
+    <button onClick={checkTime}>Check if tea is ready</button>
   </>
+
+  export default Tea;
 }
 ```
